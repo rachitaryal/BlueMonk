@@ -1,7 +1,7 @@
 {
   "name": "BlueMonk",
   "version": "1.0.0",
-  "description": "",
+  "description": "Framework to build Web APIs",
   "main": "Server.ts",
   "scripts": {
     "start": "node ./src/<Root>/Server.js",
@@ -9,7 +9,7 @@
     "build": "tsc -p ."
   },
   "keywords": [],
-  "author": "",
+  "author": "Rachit Aryal",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
