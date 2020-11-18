@@ -1,4 +1,4 @@
-import {monk_func} from './Monk/@_utilities'
+import {monk_func} from './Monk/Utilities/@_utilities'
 
 const args: string[] = process.argv
 

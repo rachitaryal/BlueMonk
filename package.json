@@ -5,7 +5,7 @@
   "main": "Server.ts",
   "scripts": {
     "start": "node ./src/<Root>/Server.js",
-    "dev": "nodemon 'src/<Root>/Server.ts'",
+    "dev": "nodemon 'src/Kepma/Server.ts'",
     "build": "tsc -p ."
   },
   "keywords": [],
