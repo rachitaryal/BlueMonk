@@ -1,12 +1,13 @@
 import express from 'express'
-const app_router = express.Router()
+// import run from '../../../Monk/Dispatcher/Dispatcher'
+// import AppListController from '../Controllers/AppListController'
 
-app_router.get('/', (req, res) => {
-   res.json({msg: 'App is working'})
-});
-// router.post("/", (req, res) => {});
-// router.get("/:id", (req, res) => {});
-// router.put("/:id", (req, res) => {});
-// router.delete("/:id", (req, res) => {});
+const app_router = express.Router()
+// app_router.get('/', (req, res)=> run(AppListController, req, res))
+// app_router.post('/', (req, res)=> run(AppPostController, req, res))
+// app_router.get('/:id', (req, res)=> run(AppRetrieveController, req, res))
+// app_router.put('/:id', (req, res)=> run(AppUpdateController, req, res))
+// app_router.delete('/:id', (req, res)=> run(AppDestroyController, req, res))
+
 
 export default app_router
