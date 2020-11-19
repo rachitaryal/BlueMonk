@@ -1,5 +1,5 @@
 import express from 'express'
-// import run from '../../../Monk/Dispatcher/Dispatcher'
+import {run} from 'Monk/Library/@dispatcher'
 // import AppListController from '../Controllers/AppListController'
 
 const app_router = express.Router()

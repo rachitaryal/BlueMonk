@@ -4,9 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import router from './Routes'
-// import {console_logger} from '../../Monk/Utilities/@_utilities' //uncomment this in project
-import {console_logger} from '../../Utilities/@_utilities' // remove in project
-
+import {console_logger} from 'Monk/Library/@utilities'
 //create server
 const server = express()
 

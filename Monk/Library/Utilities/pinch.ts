@@ -1,31 +1,35 @@
 import * as fs from 'fs'
+import console_logger from './console_logger'
 
 const createDir = (dirPath:string) => {
     try{
         fs.mkdirSync(process.cwd() + dirPath, {recursive: true})
     }catch(err){
-        console.log(`Error: ${err}`)
+        console_logger(`Error: ${err}`)
     }
 }
 
 const createFile = (filePath:string, fileContent='') =>{
     fs.writeFile(filePath, fileContent, (error)=>{
         if(error){
-            console.log('Error: ', error)
+            console_logger(`Error: ${error}`)
         } 
     })
 } 
 
 const copyFile = (source_file:string, destination_file:string) =>{
     fs.copyFile(source_file, destination_file, (error) => {
-    if (error) console.log('Error: ', error);
+        if (error) console_logger(`Error: ${error}`);
     });
 }
 
 class Pinch{
     name:string
-    src_path = '/src/'
-    monk_src = './Monk/src/'
+    src_path = '/src'
+    // monk_src = '../../Monk/src'
+    //Monk/Library/src/Root/Server
+    //./node_modules/Monk/Library/src/
+    monk_src = './node_modules/Monk/Library/src/'
     monk_root = `${this.monk_src}/Root`
     monk_app = `${this.monk_src}/App`
 
@@ -52,13 +56,17 @@ class Pinch{
         const monk_routes_file = `${monk_root}/Routes.ts`
         const monk_setup_file = `${monk_root}/Setup.ts`
 
-        createDir(root)
-        createFile(server_file)
-        createFile(routes_file)
-        createFile(setup_file)
-        copyFile(monk_server_file, server_file)
-        copyFile(monk_routes_file, routes_file)
-        copyFile(monk_setup_file, setup_file) 
+        try {
+            createDir(root)
+            createFile(server_file)
+            createFile(routes_file)
+            createFile(setup_file)
+            copyFile(monk_server_file, server_file)
+            copyFile(monk_routes_file, routes_file)
+            copyFile(monk_setup_file, setup_file)            
+        } catch (error) {
+            console_logger(`Error: ${error}`)
+        }
     }
 
     app_directory(){
@@ -73,11 +81,15 @@ class Pinch{
         const Models = `${App}/Models`
         const Services = `${App}/Services`
 
-        createDir(App)
-        createDir(Controllers)
-        createDir(Routes)
-        createDir(Models)
-        createDir(Services)
+        try {
+            createDir(App)
+            createDir(Controllers)
+            createDir(Routes)
+            createDir(Models)
+            createDir(Services)
+        } catch (error) {
+            console_logger(`Error: ${error}`)
+        }
 
     }
 
@@ -95,19 +107,23 @@ class Pinch{
         const model_namespace = `${dot_path}/${app_name}/Models/@_model.ts`
         const controller_namespace = `${dot_path}/${app_name}/Controllers/@_controller.ts`
 
-        const routes_file = `${dot_path}${app_name}/Routes/${app_name}Routes.ts`
+        const routes_file = `${dot_path}/${app_name}/Routes/${app_name}Routes.ts`
         const monk_routes_file = `${monk_app}/Routes/AppRoutes.ts`
 
-        createFile(routes_namespace)
-        createFile(model_namespace)
-        createFile(service_namespace)
-        createFile(controller_namespace)
+        try {
+            createFile(routes_namespace)
+            createFile(model_namespace)
+            createFile(service_namespace)
+            createFile(controller_namespace)
 
-        //create app routes file
-        createFile(routes_file)
+            //create app routes file
+            createFile(routes_file)
 
-        //coping routes file from monk/src/app/routes/approutes.ts to current app routes.ts
-        copyFile(monk_routes_file, routes_file)
+            //coping routes file from monk/src/app/routes/approutes.ts to current app routes.ts
+            copyFile(monk_routes_file, routes_file)
+        } catch (error) {
+            console_logger(`Error: ${error}`)
+        }
     }
 }
 
