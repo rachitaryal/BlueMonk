@@ -71,4 +71,4 @@ Create tsconfig.json file.
 
 ```
 
-![](images/logo/Monk3.gif)
+![](images/logo/Monk4.gif)
