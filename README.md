@@ -8,8 +8,8 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 - Start building Apis
 
 > The beautiful design and architecture of
-> the framework will help you develop your
-> project quickly more efficiently.
+> the framework will help you build your
+> project quickly & more efficiently.
 > The framework helps in making your project more
 > structured and therefore scalable.
 > Avoid redundant patterns.
