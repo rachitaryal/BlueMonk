@@ -27,4 +27,4 @@ $ npm i -D cors dotenv nodemon ts-node typescript mongoose @types/cors @types/ex
 $ npm i bluemonk
 ```
 
-![](Monk/Images/Logo/Monk2.png)
+![](Monk/Images/Logo/Monk2.gif)
