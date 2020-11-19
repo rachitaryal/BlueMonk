@@ -32,7 +32,7 @@ Create monk.ts file.
 ```sh
 $ touch monk.ts
 
-#add the follow in the monk.ts file
+#add the following in the monk.ts file
 import {monk_func} from 'Monk/Library/@utilities'
 const args: string[] = process.argv
 monk_func(args)
@@ -43,7 +43,7 @@ Edit package.json file.
 
 ```sh
 
-#add the follow in the package.json file
+#add the following in the package.json file
 "scripts": {
     "start": "node ./src/<Root>/Server.js",
     "dev": "nodemon 'src/<Root>/Server.ts'",
@@ -56,7 +56,7 @@ Create tsconfig.json file.
 
 ```sh
 
-#add the follow in the tsconfig.json file
+#add the following in the tsconfig.json file
 "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
