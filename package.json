@@ -1,5 +1,5 @@
 {
-  "name": "Monk",
+  "name": "monk",
   "version": "1.0.0",
   "description": "Framework to build Web APIs",
   "main": "Server.ts",
