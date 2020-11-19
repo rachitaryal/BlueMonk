@@ -27,4 +27,16 @@ $ npm i -D cors dotenv nodemon ts-node typescript mongoose @types/cors @types/ex
 $ npm i bluemonk
 ```
 
+Create monk.ts file.
+
+```sh
+$ touch monk.ts
+
+#add the follow in the monk.ts file
+    import {monk_func} from './Monk/Utilities/@_utilities'
+    const args: string[] = process.argv
+    monk_func(args)
+
+```
+
 ![](Monk/Images/Logo/Monk2.gif)
