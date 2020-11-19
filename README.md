@@ -33,7 +33,7 @@ Create monk.ts file.
 $ touch monk.ts
 
 #add the following in the monk.ts file
-import {monk_func} from 'Monk/Library/@utilities'
+import {monk_func} from 'monk/lib/@utilities'
 const args: string[] = process.argv
 monk_func(args)
 

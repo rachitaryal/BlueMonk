@@ -29,7 +29,7 @@ class Pinch{
     // monk_src = '../../Monk/src'
     //Monk/Library/src/Root/Server
     //./node_modules/Monk/Library/src/
-    monk_src = './node_modules/Monk/Library/src/'
+    monk_src = './node_modules/monk/lib/src/'
     monk_root = `${this.monk_src}/Root`
     monk_app = `${this.monk_src}/App`
 
