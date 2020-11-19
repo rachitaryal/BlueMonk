@@ -1,5 +1,5 @@
 import {Request, response, Response} from 'express'
-import PermissionBaseApi from "../Abstract/PermissionBaseApi"
+import PermissionBaseApi from "../abstract/PermissionBaseApi"
 // import {LOGGED_IN_USER} from "../Data/Data"
 
 

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { ApiBaseClassController } from "../Controllers/@_api_abstract_controllers"
+import { ApiBaseClassController } from "../controllers/@_api_abstract_controllers"
 
 
 const run = (controller_class:typeof ApiBaseClassController, request:Request, response:Response)=>{

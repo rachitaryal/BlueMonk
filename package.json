@@ -4,9 +4,6 @@
   "description": "Framework to build Web APIs",
   "main": "Server.ts",
   "scripts": {
-    "start": "node ./src/<Root>/Server.js",
-    "dev": "nodemon 'src/<Root>/Server.ts'",
-    "build": "tsc -p ."
   },
   "keywords": [],
   "author": "Rachit Aryal",
