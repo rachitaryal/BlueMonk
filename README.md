@@ -33,9 +33,41 @@ Create monk.ts file.
 $ touch monk.ts
 
 #add the follow in the monk.ts file
-    import {monk_func} from './Monk/Utilities/@_utilities'
-    const args: string[] = process.argv
-    monk_func(args)
+import {monk_func} from 'Monk/Library/@utilities'
+const args: string[] = process.argv
+monk_func(args)
+
+```
+
+Edit package.json file.
+
+```sh
+
+#add the follow in the package.json file
+"scripts": {
+    "start": "node ./src/<Root>/Server.js",
+    "dev": "nodemon 'src/<Root>/Server.ts'",
+    "build": "tsc -p ."
+  }
+
+```
+
+Create tsconfig.json file.
+
+```sh
+
+#add the follow in the tsconfig.json file
+"compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict":true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+}
 
 ```
 
