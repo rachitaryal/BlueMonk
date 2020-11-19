@@ -11,9 +11,9 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 > this framework will help you develop your
 > project quickly.
 > The framework helps in making your project more
-> structured and therefore scalable
-> Avoid redundant architectural patterns
-> Build with Blue Monk
+> structured and therefore scalable.
+> Avoid redundant patterns.
+> Build with Blue Monk.
 
 ### Installation
 
@@ -24,7 +24,7 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ npm intall express
 $ npm i cors dotenv nodemon ts-node typescript mongoose @types/cors @types/express @types/mongoose @types/node @types/body-parser
-$ node app
+$ npm i bluemonk
 ```
 
-![](Monk/Images/Logo/BlueMonk_Blue.png)
+![](Monk/Images/Logo/Monk2.png)
