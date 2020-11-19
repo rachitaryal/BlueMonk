@@ -1,6 +1,6 @@
 import * as fs from 'fs'
-import Pinch from './pinch'
-import console_logger from './console_logger'
+import Pinch from './Pinch'
+import console_logger from './ConsoleLogger'
 const args: string[] = process.argv
 
 

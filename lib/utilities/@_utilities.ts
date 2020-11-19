@@ -1,6 +1,6 @@
-import console_logger from './console_logger'
-import Pinch from './pinch'
-import monk_func from './monk_func'
+import console_logger from './ConsoleLogger'
+import Pinch from './Pinch'
+import monk_func from './MonkFunc'
 
 export {
     console_logger,

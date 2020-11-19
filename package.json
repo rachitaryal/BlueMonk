@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Framework to build Web APIs",
   "main": "Server.ts",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Rachit Aryal",
   "license": "ISC",

@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import console_logger from './console_logger'
+import console_logger from './ConsoleLogger'
 
 const createDir = (dirPath:string) => {
     try{
