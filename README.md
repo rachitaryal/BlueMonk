@@ -91,4 +91,4 @@ Create tsconfig.json file.
 
 ```
 
-![](images/logo/Monk5.gif)
+![](images/logo/Monk6.gif)
