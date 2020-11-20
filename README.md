@@ -17,6 +17,26 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 
 ### Installation
 
+##### Installation with monk-cli
+
+Clone monk-cli from monk-cli repository
+
+```sh
+$ npm i -g monk-cli
+
+#to start the project
+$ monk project <project_name>
+
+#to install all the dependencies
+$ npm install
+
+#to create app
+$ monk app <app_name>
+
+```
+
+##### Installation without monk-cli
+
 Blue Monk requires [Node.js](https://nodejs.org/) v4+ to run.
 
 Install the dependencies and devDependencies and start the server.
