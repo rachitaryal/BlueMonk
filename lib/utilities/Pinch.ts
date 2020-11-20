@@ -1,7 +1,7 @@
 import * as fs from 'fs'
+import path from 'path'
 import console_logger from './ConsoleLogger'
 
-//to create directories
 const createDir = (dirPath:string) => {
     try{
         fs.mkdirSync(process.cwd() + dirPath, {recursive: true})
@@ -10,7 +10,6 @@ const createDir = (dirPath:string) => {
     }
 }
 
-// to create file with empty content
 const createFile = (filePath:string, fileContent='') =>{
     fs.writeFile(filePath, fileContent, (error)=>{
         if(error){
@@ -19,7 +18,6 @@ const createFile = (filePath:string, fileContent='') =>{
     })
 } 
 
-// to create file with content 
 const createFileWithContent = (srcFilePath:string, destFilePath:string) => {
     //"srcFilePath" is the file to be read from and "destFilePath" is the file to be written to
     fs.readFile(srcFilePath, 'utf8', function(err, fileContent){ 
@@ -27,7 +25,6 @@ const createFileWithContent = (srcFilePath:string, destFilePath:string) => {
     })
 } 
 
-// to copy source file to destiontion file
 const copyFile = (source_file:string, destination_file:string) =>{
     fs.copyFile(source_file, destination_file, (error) => {
         if (error) console_logger(`Error: ${error}`);
@@ -37,10 +34,12 @@ const copyFile = (source_file:string, destination_file:string) =>{
 class Pinch{
     name:string
     src_path = '/src'
+    cwd = process.cwd()
     // monk_src = '../../Monk/src'
     //Monk/Library/src/Root/Server
     //./node_modules/Monk/Library/src/
-    monk_src = './node_modules/monk/lib/src/'
+    //path.join(__dirname + '/../src/')
+    monk_src = path.join(__dirname + '/../src/')
     monk_root = `${this.monk_src}/Root`
     monk_app = `${this.monk_src}/App`
 
@@ -59,21 +58,25 @@ class Pinch{
         const root = `${src}/${project_name}`
         const monk_root = this.monk_root
 
-        //destination files
+        //destination root files
         const server_file = `.${root}/Server.ts`
         const routes_file = `.${root}/Routes.ts`
         const setup_file = `.${root}/Setup.ts`
 
-        //source files
-        const monk_server_file = `${monk_root}/Server.ts`
-        const monk_routes_file = `${monk_root}/Routes.ts`
-        const monk_setup_file = `${monk_root}/Setup.ts`
+        //source  root files
+        const monk_server_file = `${monk_root}/Server.txt`
+        const monk_routes_file = `${monk_root}/Routes.txt`
+        const monk_setup_file = `${monk_root}/Setup.txt`
 
+    
         try {
             createDir(root)
-            createFileWithContent(monk_server_file, server_file)
+            createFileWithContent(monk_server_file, server_file )
             createFileWithContent(monk_routes_file, routes_file)
-            createFileWithContent(monk_setup_file, setup_file)       
+            createFileWithContent(monk_setup_file, setup_file)
+            // copyFile(monk_server_file, server_file)
+            // copyFile(monk_routes_file, routes_file)
+            // copyFile(monk_setup_file, setup_file)            
         } catch (error) {
             console_logger(`Error: ${error}`)
         }
@@ -131,7 +134,7 @@ class Pinch{
             createFile(controller_namespace)
 
             createFileWithContent(monk_routes_file, routes_file)
-            
+
         } catch (error) {
             console_logger(`Error: ${error}`)
         }
