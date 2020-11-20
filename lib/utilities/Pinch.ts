@@ -64,9 +64,9 @@ class Pinch{
         const setup_file = `.${root}/Setup.ts`
 
         //source  root files
-        const monk_server_file = `${monk_root}/Server.txt`
-        const monk_routes_file = `${monk_root}/Routes.txt`
-        const monk_setup_file = `${monk_root}/Setup.txt`
+        const monk_server_file = `${monk_root}/Server.ts`
+        const monk_routes_file = `${monk_root}/Routes.ts`
+        const monk_setup_file = `${monk_root}/Setup.ts`
 
     
         try {
@@ -74,9 +74,7 @@ class Pinch{
             createFileWithContent(monk_server_file, server_file )
             createFileWithContent(monk_routes_file, routes_file)
             createFileWithContent(monk_setup_file, setup_file)
-            // copyFile(monk_server_file, server_file)
-            // copyFile(monk_routes_file, routes_file)
-            // copyFile(monk_setup_file, setup_file)            
+                    
         } catch (error) {
             console_logger(`Error: ${error}`)
         }
