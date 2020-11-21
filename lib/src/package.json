@@ -1,8 +1,8 @@
 {
-  "name": "Monk",
+  "name": "bluemonk",
   "version": "1.0.0",
   "description": "Framework to build Web APIs",
-  "main": "Server.ts",
+  "main": "index.ts",
   "scripts": {
     "start": "node ./src/<Root>/Server.js",
     "dev": "nodemon 'src/<Root>/Server.ts'",

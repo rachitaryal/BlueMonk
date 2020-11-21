@@ -1,6 +1,6 @@
-// import {monk_func} from './Monk/@_utilities'
+import {monk_func} from 'bluemonk/@_utilities'
 
-// const args: string[] = process.argv
+const args: string[] = process.argv
 
-// const run_monk = () => monk_func(args)
-// run_monk()
+const run_monk = () => monk_func(args)
+run_monk()

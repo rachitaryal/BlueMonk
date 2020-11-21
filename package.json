@@ -1,10 +1,10 @@
 {
-  "name": "monk",
+  "name": "bluemonk",
   "version": "1.0.0",
   "description": "Framework to build Web APIs",
-  "main": "Server.ts",
+  "main": "index.ts",
   "scripts": {},
-  "keywords": [],
+  "keywords": ["monk", "bluemonk", "node-framework", "framework", "express"],
   "author": "Rachit Aryal",
   "license": "ISC",
   "dependencies": {
