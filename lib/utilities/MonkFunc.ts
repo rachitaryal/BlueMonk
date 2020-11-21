@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import path from 'path'
 import Pinch from './Pinch'
 import console_logger from './ConsoleLogger'
 const args: string[] = process.argv
@@ -31,7 +32,9 @@ const monk_func = (args:string[]) => {
     }
 
     if(startproject_commands.includes(command)){
-        const src_dir = `./src/`
+        const cwd = process.cwd()
+        const src_dir = path.join(cwd + '/src')
+
         if(fs.existsSync(src_dir)){
             console_logger('Project has already been initiated\n\tRun: "ts-node monk.ts app <app_name>"')
             return
@@ -43,7 +46,9 @@ const monk_func = (args:string[]) => {
     }
 
     if(createapp_commands.includes(command)){
-        const src_dir = './src/'
+        const cwd = process.cwd()
+        const src_dir = path.join(cwd + '/src')
+        
         if(!fs.existsSync(src_dir)){
             console_logger(`Project has not been created yet.\n\tRun: "ts-node monk.ts project <project_name>"`)
             return
