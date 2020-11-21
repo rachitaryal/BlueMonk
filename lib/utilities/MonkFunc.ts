@@ -33,7 +33,7 @@ const monk_func = (args:string[]) => {
     if(startproject_commands.includes(command)){
         const src_dir = `./src/`
         if(fs.existsSync(src_dir)){
-            console_logger('Project has already been initiated\n\tRun: "node monk.js createapp <app_name>"')
+            console_logger('Project has already been initiated\n\tRun: "ts-node monk.ts app <app_name>"')
             return
         }
         const project_name = getName()
@@ -45,7 +45,7 @@ const monk_func = (args:string[]) => {
     if(createapp_commands.includes(command)){
         const src_dir = './src/'
         if(!fs.existsSync(src_dir)){
-            console_logger(`Project has not been created yet.\n\tRun: "node monk.js startproject <project_name>"`)
+            console_logger(`Project has not been created yet.\n\tRun: "ts-node monk.ts project <project_name>"`)
             return
         }
         const app_name = getName()
@@ -57,7 +57,7 @@ const monk_func = (args:string[]) => {
         const pinch = new Pinch(app_name)
         pinch.app_directory()
         pinch.app_files()        
-        console_logger(`${app_name} app created`)
+        console_logger(`"${app_name}" app created`)
 
     }
 
