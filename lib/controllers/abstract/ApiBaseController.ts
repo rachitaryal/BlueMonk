@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'  
 import { PermissionError } from '../../errors/@_errors'
-import {PermissionClassBaseApi} from "../../permissions/@_permissions_abstract"
+import {PermissionClassBaseApi} from "../../permissions/@_api_abstract_permissions"
 
 
 abstract class ApiBaseController{
