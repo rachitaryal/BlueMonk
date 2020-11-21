@@ -16,10 +16,10 @@ Blue Monk requires [Node.js](https://nodejs.org/) v12+ to run.
 
 #### Installation with bluemonk-cli
 
-Clone [bluemonk-cli](https://github.com/rachitaryal/blue_monk_cli)
+Clone [BlueMonk Command Line Interface](https://github.com/rachitaryal/blue_monk_cli)
 
 ```sh
-$ npm i -g monk-cli
+$ npm i -g bluemonk-cli
 
 #to start the project
 $ monk project <project_name>
