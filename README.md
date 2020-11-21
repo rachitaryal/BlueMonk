@@ -5,8 +5,15 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 > The beautiful design and architecture of
 > the framework will help you build your
 > project quickly & more efficiently.
-> The framework helps in making your project more
-> structured and therefore scalable.
+> The framework helps to build the project in
+> a structured approach and therefore it makes the project much more scalable.
+
+> The inbuilt Routers modules are built on top of express and makes routes navigation much simpler.
+
+> The Permissions modules provide built in permissions layer such as 'LoggedInPermission' etc. Abstract permission layer can easily be extended to build custom permission for the project.
+
+> The inbuilt Controllers modules handles the requests, checks permissions( if provided ) and dispatches the required request method. ApiControllers can be extended to make your own controllers and it makes working with controllers much simpler.
+
 > Avoid redundant patterns.
 > Build with Blue Monk.
 
@@ -16,7 +23,7 @@ Blue Monk requires [Node.js](https://nodejs.org/) v12+ to run.
 
 #### Installation with bluemonk-cli
 
-Clone [BlueMonk Command Line Interface](https://github.com/rachitaryal/blue_monk_cli)
+GitHub: [BlueMonk Command Line Interface](https://github.com/rachitaryal/blue_monk_cli)
 
 ```sh
 $ npm i -g bluemonk-cli
@@ -40,7 +47,7 @@ $ npm run dev
 
 ```
 
-#### Installation without monk-cli
+#### Installation without bluemonk-cli
 
 Install the dependencies and devDependencies and start the server.
 
@@ -56,7 +63,7 @@ Create monk.ts file.
 $ touch monk.ts
 
 #add the following in the monk.ts file
-import {monk_func} from 'monk/lib/@utilities'
+import {monk_func} from 'bluemonk'
 const args: string[] = process.argv
 monk_func(args)
 
@@ -68,8 +75,7 @@ Edit package.json file.
 
 #add the following in the package.json file
 "scripts": {
-    "start": "node ./src/<Root>/Server.js",
-    "dev": "nodemon 'src/<Root>/Server.ts'",
+    "dev": "nodemon 'src/<project_name>/Server.ts'",
     "build": "tsc -p ."
   }
 
