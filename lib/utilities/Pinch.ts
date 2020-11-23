@@ -25,12 +25,6 @@ const createFileWithContent = (srcFilePath:string, destFilePath:string) => {
     })
 } 
 
-const copyFile = (source_file:string, destination_file:string) =>{
-    fs.copyFile(source_file, destination_file, (error) => {
-        if (error) console_logger(`Error: ${error}`);
-    });
-}
-
 
 const copyFileSync = ( source:string, target:string ) => {
 
@@ -70,6 +64,7 @@ const copyFolderRecursiveSync = ( source:string, target:string ) => {
 }
 
 class MakeUsers {
+    /* to build the users module */
     src_path = '/src'
     cwd = process.cwd()
     monk_src = path.join(__dirname + '/../src')
@@ -89,11 +84,10 @@ class MakeUsers {
 }
 
 class Pinch{
+    /* to build the src folder root dir and apps directories */
     name:string
     src_path = '/src'
     cwd = process.cwd()
-    // monk_src = '../../Monk/src'
-    //Monk/Library/src/Root/Server
     //./node_modules/Monk/Library/src/
     //path.join(__dirname + '/../src/')
     monk_src = path.join(__dirname + '/../src/')
@@ -172,10 +166,10 @@ class Pinch{
         const dot_path = `.${src}`
 
         //destination files
-        const service_namespace = `${dot_path}/${app_name}/Services/@_service.ts`
+        const service_namespace = `${dot_path}/${app_name}/Services/@_services.ts`
         const routes_namespace = `${dot_path}/${app_name}/Routes/@_routes.ts`
-        const model_namespace = `${dot_path}/${app_name}/Models/@_model.ts`
-        const controller_namespace = `${dot_path}/${app_name}/Controllers/@_controller.ts`
+        const model_namespace = `${dot_path}/${app_name}/Models/@_models.ts`
+        const controller_namespace = `${dot_path}/${app_name}/Controllers/@_controllers.ts`
 
         //destination route file
         const routes_file = `${dot_path}/${app_name}/Routes/${app_name}Routes.ts`
