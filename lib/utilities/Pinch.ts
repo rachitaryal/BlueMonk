@@ -31,6 +31,63 @@ const copyFile = (source_file:string, destination_file:string) =>{
     });
 }
 
+
+const copyFileSync = ( source:string, target:string ) => {
+
+    var targetFile = target;
+
+    // If target is a directory, a new file with the same name will be created
+    if ( fs.existsSync( target ) ) {
+        if ( fs.lstatSync( target ).isDirectory() ) {
+            targetFile = path.join( target, path.basename( source ) );
+        }
+    }
+
+    fs.writeFileSync(targetFile, fs.readFileSync(source));
+}
+
+const copyFolderRecursiveSync = ( source:string, target:string ) => {
+    let files = [];
+
+    // Check if folder needs to be created or integrated
+    let targetFolder = path.join( target, path.basename( source ) );
+    if ( !fs.existsSync( targetFolder ) ) {
+        fs.mkdirSync( targetFolder );
+    }
+
+    // Copy
+    if ( fs.lstatSync( source ).isDirectory() ) {
+        files = fs.readdirSync( source );
+        files.forEach( function ( file ) {
+            let curSource = path.join( source, file );
+            if ( fs.lstatSync( curSource ).isDirectory() ) {
+                copyFolderRecursiveSync( curSource, targetFolder );
+            } else {
+                copyFileSync( curSource, targetFolder );
+            }
+        } );
+    }
+}
+
+class MakeUsers {
+    src_path = '/src'
+    cwd = process.cwd()
+    monk_src = path.join(__dirname + '/../src')
+    monk_users_app = `${this.monk_src}/Users`
+
+    createUsersApp(){
+        // source Users dir
+        const cwd = this.cwd
+        const monk_users_app = this.monk_users_app
+
+        //destination Users dir
+        const users_app = `${cwd}/src/`
+
+        copyFolderRecursiveSync(monk_users_app, users_app)
+
+    }
+}
+
 class Pinch{
     name:string
     src_path = '/src'
@@ -140,3 +197,6 @@ class Pinch{
 }
 
 export default Pinch
+export {
+    MakeUsers
+}

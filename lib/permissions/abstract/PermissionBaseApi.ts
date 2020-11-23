@@ -9,8 +9,6 @@ abstract class PermissionBaseApi{
     }
 
     abstract validate(): boolean //returns boolean value, true if validated 
-
-    abstract check():boolean //returns boolean and response error msg object if not validated
 }
 
 
@@ -23,8 +21,8 @@ class PermissionClassBaseApi extends PermissionBaseApi{
     */
 
     validate = () => false 
-    check = () => false
 }
+
 
 export default PermissionBaseApi
 

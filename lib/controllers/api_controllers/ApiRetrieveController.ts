@@ -1,32 +1,25 @@
 import { Request, Response } from 'express'  
+import { console_logger } from '../../utilities/@_utilities'
 import {ApiBaseController} from "../@_api_abstract_controllers"
-// import {DispatchError} from "../../Errors/@_errors"
 
 
 class ApiRetrieveController extends ApiBaseController{
 
     protected get(request:Request, response:Response){
-
-        if(!this.model){
-            console.log('call success without model')
-        }
-        else{ 
-            console.log('call success with model')
-        }
-
+        console_logger('Inside ApiRetrieveController')
     }
 
 
     dispatch(request:Request, response:Response){
-        //check permission and dispatch get() method
-        if(this.permission_class){
-            const valid = this.check(request, response)
-            if(valid){
-                this.get(request, response)
-            }
-        }else{
+        /* check permission and dispatch get() method */
+
+        if(!this.permission_class) return this.get(request, response)
+
+        //if permission_class is provided
+        const valid = this.check(request, response)
+        if(valid){
             this.get(request, response)
-        }         
+        }          
     }
 }
 

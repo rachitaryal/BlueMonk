@@ -1,5 +1,5 @@
 import DispatchError from "./ControllerErrors/DispatchError"
-import PermissionError from './ControllerErrors/PermissionError'
+import PermissionError from './PermissionError/PermissionError'
 
 export{
     DispatchError,

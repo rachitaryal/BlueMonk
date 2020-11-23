@@ -5,14 +5,12 @@ import {PermissionClassBaseApi} from "../../permissions/@_api_abstract_permissio
 
 abstract class ApiBaseController{
     permission_class?: typeof PermissionClassBaseApi
-    model?: {}[]
-
 
     protected check(request:Request, response:Response){
         // check permission based on permission class 
         if(!this.permission_class) throw new PermissionError('Permission Class is not provided')
         const permission_ins = new this.permission_class(request, response)
-        const valid = permission_ins.check()
+        const valid = permission_ins.validate()
         return valid  
     }
 
