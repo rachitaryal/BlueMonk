@@ -43,7 +43,13 @@ $ monk app <app_name>
 
 ```sh
 # start the server
-$ npm run dev
+$ npm start
+
+```
+
+```sh
+# to utilize the inbuilt Users module
+$ monk add users
 
 ```
 

@@ -29,7 +29,7 @@ const monk_func = (args:string[]) => {
 
     const valid_commands = [...startproject_commands, ...createapp_commands, ...createusersapp_commands]
     if(!valid_commands.includes(command)){
-        console_logger('Invalid Command')
+        console_logger('\tInvalid Command')
     }
 
     //ts-node monk.ts project <project_name>
@@ -44,7 +44,7 @@ const monk_func = (args:string[]) => {
         const project_name = getName()
         const pinch = new Pinch(project_name)
         pinch.source()
-        console_logger(`Project "${project_name}" Created`)
+        console_logger(`\tProject "${project_name}" Created`)
     }
 
     //ts-node monk.ts <app_name>
@@ -59,7 +59,7 @@ const monk_func = (args:string[]) => {
         const app_name = getName()
         const app_dir = `src/${app_name}`
         if(fs.existsSync(app_dir)){
-            console_logger(`App ${app_name} already exists.`)
+            console_logger(`\tApp ${app_name} already exists.`)
             return
         }
         const pinch = new Pinch(app_name)
