@@ -1,6 +1,6 @@
 {
   "name": "bluemonk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Framework to build Web APIs",
   "main": "index.ts",
   "scripts": {},
