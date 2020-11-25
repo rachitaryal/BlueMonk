@@ -4,18 +4,15 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 
 ![](https://github.com/rachitaryal/BlueMonk/blob/master/images/logo/bluemonkwallpaper_blue.gif?raw=true)
 
-> The beautiful design and architecture of
-> the framework helps to build the
-> project quickly & more efficiently.
+> The beautiful design and architecture of the framework help to build the project quickly & more efficiently
 
-> The inbuilt Routers modules are built on top of express and makes routes navigation much simpler.
+> The inbuilt Routers modules are built on top of express and make route navigation much simpler.
 
-> The Permissions modules provide built in permissions layer such as 'LoggedInPermission' . Abstract permission layer can easily be extended to build custom permission for the project.
+> The Permissions modules provide a built-in permissions layer such as 'LoggedInPermission'. Abstract permission layer can easily be extended to build custom permission for the project.
 
-> The inbuilt Controllers modules handles the requests, checks permissions and dispatches the required request method. ApiControllers can be extended to make your own controllers.
+> The inbuilt Controllers modules handle the requests, checks permissions, and dispatch the required request method. ApiControllers can be extended to make your own controllers.
 
-> Avoid redundant patterns.
-> Build with Blue Monk.
+> Avoid redundant patterns. Build with Blue Monk.
 
 ### Installation
 
