@@ -9,7 +9,9 @@
     "bluemonk",
     "node-framework",
     "framework",
-    "express"
+    "express",
+    "web-api",
+    "api"
   ],
   "author": "Rachit Aryal",
   "license": "ISC",
