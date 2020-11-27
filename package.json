@@ -1,9 +1,12 @@
 {
   "name": "bluemonk",
-  "version": "1.0.6",
+  "types": "dist/index.d.ts",
+  "version": "1.0.8",
   "description": "Framework to build Web APIs",
-  "main": "index.ts",
-  "scripts": {},
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p ."
+  },
   "keywords": [
     "monk",
     "bluemonk",
