@@ -14,14 +14,14 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 
 > Avoid redundant patterns. Build with Blue Monk.
 
-### Installation
-
-Blue Monk requires [Node.js](https://nodejs.org/) v12+ to run.
+- GitHub: [bluemonk](https://github.com/rachitaryal/BlueMonk), [bluemonk-cli](https://github.com/rachitaryal/blue_monk_cli)
+- Npm :[bluemonk](https://www.npmjs.com/package/bluemonk) , [bluemonk-cli](https://www.npmjs.com/package/bluemonk-cli)
 
 > Find docs inside the docs directory. Documentations website is in progress.
 
-- GitHub: [BlueMonk](https://github.com/rachitaryal/BlueMonk), [BlueMonk Command Line Interface](https://github.com/rachitaryal/blue_monk_cli)
-- Npm :[BlueMonk](https://www.npmjs.com/package/bluemonk) , [BlueMonk Command Line Interface](https://www.npmjs.com/package/bluemonk-cli)
+### Installation
+
+Blue Monk requires [Node.js](https://nodejs.org/) v12+ to run.
 
 #### Installation with bluemonk-cli
 
