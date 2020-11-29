@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "bluemonk": "^1.0.8"
+    "bluemonk": "^1.0.13"
   },
   "devDependencies": {
     "@types/cors": "^2.8.8",

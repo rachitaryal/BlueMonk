@@ -19,7 +19,7 @@ Blue Monk is a framework to build Web APIs upon Node environment.
 - GitHub: [bluemonk](https://github.com/rachitaryal/BlueMonk), [bluemonk-cli](https://github.com/rachitaryal/blue_monk_cli)
 - Npm :[bluemonk](https://www.npmjs.com/package/bluemonk) , [bluemonk-cli](https://www.npmjs.com/package/bluemonk-cli)
 
-> Find docs inside the docs directory. Documentations website is in progress.
+> Find [docs](https://github.com/rachitaryal/BlueMonk/tree/master/docs) inside the docs directory.
 
 ### Installation
 
@@ -30,80 +30,37 @@ Blue Monk requires [Node.js](https://nodejs.org/) v12+ to run.
 ```sh
 $ npm i -g bluemonk-cli
 
-#to start the project
-$ monk project <project_name>
+```
 
-#to install all the dependencies
-$ npm install
+### Quick Start
 
-#to create app
-$ monk app <app_name>
+> After installing the bluemonk-cli.
+
+- Create an empty directory and enter the following commands
+
+```
+  # to create a new project
+  $ monk project <project_name>
+  # also change the <project_name> in package.json file
+
+  $ npm install
+
+  # to create a new app
+  $ monk app <app_name>
 
 ```
 
-- replace "<project_name>" in package.json file with the project name
+- Create a ".env" file in the root of the project. Enter your credentials for MongoDB Atlas and Token_Secret key as following:
 
-```sh
-# start the server
-$ npm start
+```
+ DB_CONNECT=mongodb+srv://<your_username>:<your_password>@...
+ TOKEN_SECRET = yoursecretkey
 
 ```
 
-```sh
-# to utilize the inbuilt Users module
-$ monk add users
-
+```
+ # to start the server
+ $ npm start
 ```
 
-#### Installation without bluemonk-cli
-
-Install the dependencies and devDependencies and start the server.
-
-```sh
-$ npm i express
-$ npm i -D cors dotenv nodemon ts-node typescript mongoose @types/cors @types/express @types/mongoose @types/node @types/body-parser
-$ npm i bluemonk
-```
-
-Create monk.ts file.
-
-```sh
-$ touch monk.ts
-
-#add the following in the monk.ts file
-import {monk_func} from 'bluemonk'
-const args: string[] = process.argv
-monk_func(args)
-
-```
-
-Edit package.json file.
-
-```sh
-
-#add the following in the package.json file
-"scripts": {
-    "dev": "nodemon 'src/<project_name>/Server.ts'",
-    "build": "tsc -p ."
-  }
-
-```
-
-Create tsconfig.json file.
-
-```sh
-
-#add the following in the tsconfig.json file
-"compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./",
-    "strict":true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-}
-
-```
+> You can look through quick tutorial and basic commands in the [Docs](https://github.com/rachitaryal/BlueMonk/tree/master/docs) directory
